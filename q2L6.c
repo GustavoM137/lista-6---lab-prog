@@ -41,16 +41,12 @@ int main(){
     }
     if (*vet_par == NULL){
         puts("O vetor não contém nenhum elemento par");
-        free(vet);
-        vet = NULL;
-        free(vet_par);
-        vet_par = NULL;
-        
-        return 0;
     }
-    puts("Vetor que contém primeiro e último elemento par:");
-    printf("Primeiro(%d): %p\n", **vet_par, (void *) *vet_par);
-    printf("Último(%d): %p\n", **(vet_par + 1), (void *) *(vet_par + 1));
+    else {
+        puts("Vetor que contém o primeiro e último elemento par:");
+        printf("Primeiro(%d): %p\n", **vet_par, (void *) *vet_par);
+        printf("Último(%d): %p\n", **(vet_par + 1), (void *) *(vet_par + 1));
+    }
 
     free(vet);
     vet = NULL;
