@@ -93,7 +93,7 @@ void ordenar_vetor(int *const p, unsigned tam_p){
     unsigned char flag;
     for (unsigned i = 1; i < tam_p; i++){
         flag = 1;
-        for (unsigned j = 0; j < tam_p - 1; j++){
+        for (unsigned j = 0; j < tam_p - i; j++){
             if (*(p + j) > *(p + (j + 1))){
                 int temp = *(p + j);
                 *(p + j) = *(p + (j + 1));
