@@ -6,7 +6,7 @@
 
 void *alocar_mem(unsigned tam_p, size_t tam_tipo);
 void popular_pont(int *const pont, unsigned tam_p);
-int *endereco_primeiro_par(const int *const pont, unsigned tam_p);
+int *endereco_primeiro_par(int *const pont, unsigned tam_p);
 
 int main(){
     unsigned n;
@@ -55,7 +55,7 @@ void popular_pont(int *const pont, unsigned tam_p){
     }
 }
 
-int *endereco_primeiro_par(const int *const pont, unsigned tam_p){
+int *endereco_primeiro_par(int *const pont, unsigned tam_p){
     for (unsigned i = 0; i < tam_p; i++){
         if (*(pont + i) % 2 == 0) return pont + i;
     }
