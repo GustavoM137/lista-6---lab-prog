@@ -8,10 +8,18 @@ void *alocar_mem(unsigned tam_p, size_t tam_tipo);
 void popular_pont(int *const pont, unsigned tam_p);
 int *endereco_primeiro_par(int *const pont, unsigned tam_p);
 
-int main(){
-    unsigned n;
-    puts("Digite o tamanho do vetor:");
-    while(scanf("%u", &n) != 1 || n == 0) puts("Valor inválido, digite novamente:");
+int main(int argc, char *argv[]){
+    if (argc != 2){
+        puts("Erro, quantidade de argumentos inesperada");
+        return 1;
+    }
+
+    int tam = atoi(argv[1]);
+    if (tam <= 0){
+        puts("Erro, tamanho inválido");
+        return 1;
+    }
+    unsigned n = tam;
 
     int *vet = NULL;
     vet = (int *) alocar_mem(n, sizeof(int));
