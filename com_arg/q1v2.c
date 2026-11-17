@@ -10,7 +10,7 @@ int *endereco_primeiro_par(int *const pont, unsigned tam_p);
 
 int main(int argc, char *argv[]){
     if (argc != 2){
-        puts("Erro, quantidade de argumentos inesperada");
+        printf("Uso: %s <tamanho_vetor>\n", *argv);
         return 1;
     }
 
