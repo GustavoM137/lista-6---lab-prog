@@ -105,7 +105,6 @@ int **criar_matriz(unsigned lin, unsigned col){
                 i--;
             }
             free(mat);
-            mat = NULL;
             return NULL;
         }
     }
