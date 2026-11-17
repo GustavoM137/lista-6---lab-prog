@@ -10,7 +10,7 @@ void imprimir_matriz(int *const *const mat, unsigned lin, unsigned col);
 void popular_matriz(int *const *const mat, unsigned lin, unsigned col);
 int **criar_matriz(unsigned lin, unsigned col);
 void liberar_mem(int **mat, unsigned lin);
-void diagonal_p_soma(int *const *const mat, unsigned d);
+void somar_diagonal_principal(int *const *const mat, unsigned d);
 
 int main(){
     unsigned dimensao;
@@ -30,7 +30,7 @@ int main(){
     puts("Matriz:");
     imprimir_matriz(M, dimensao, dimensao);
 
-    diagonal_p_soma(M, dimensao);
+    somar_diagonal_principal(M, dimensao);
 
     liberar_mem(M, dimensao);
     M = NULL;
@@ -92,7 +92,7 @@ void liberar_mem(int **mat, unsigned lin){
     free(mat);
 }
 
-void diagonal_p_soma(int *const *const mat, unsigned d){
+void somar_diagonal_principal(int *const *const mat, unsigned d){
     int soma = 0;
     for (unsigned i = 0; i < d; i++){
         soma += *(*(mat + i) + i);
